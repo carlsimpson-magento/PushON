@@ -11,24 +11,17 @@
                 <span class="action-text" translate="'Close'"/>
             </button>
         </div>
-
         <div class="continue-shopping"><a href="#" class="link">Continue Shopping</a></div>
-
         <if args="getCartParam('summary_count')">
             <strong class="subtitle" translate="'Recently added item(s)'"/>
             <div data-action="scroll" class="minicart-items-wrapper">
-
-
                 <ol id="mini-cart" class="minicart-items" data-bind="foreach: { data: getCartItems(), as: 'item' }">
                     <each args="$parent.getRegion($parent.getItemRenderer(item.product_type))"
                           render="{name: getTemplate(), data: item, afterRender: function() {$parents[1].initSidebar()}}"
                     />
                 </ol>
-
-
             </div>
         </if>
-
         <div class="summary-wrapper">
             <if args="getCartParam('summary_count')">
 
@@ -62,9 +55,6 @@
                 </if>
             </ifnot>
 
-
-
-
             <div class="actions" if="getCartParam('summary_count')">
                 <div class="primary">
                     <button
@@ -83,7 +73,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id="minicart-widgets" class="minicart-widgets" if="getRegion('promotion').length">
             <each args="getRegion('promotion')" render=""/>
