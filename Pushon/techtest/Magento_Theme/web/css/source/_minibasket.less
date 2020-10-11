@@ -30,7 +30,7 @@
         width:375px;
         padding: 0px;
         position: absolute;
-        right:0;
+        right:-5px;
         background: @white;
         box-shadow: 0px 0px 20px #EEEFF0;
 
@@ -170,6 +170,7 @@
           position: absolute;
           bottom: 0px;
           background:@white;
+          z-index:100;
 
           .subtotal {
 
@@ -204,6 +205,7 @@
         .continue-shopping {
           margin:10px;
           text-align: center;
+          font-size:14px;
           .link {
             color:@base-font-color;
             font-family: @proxima-regular;
@@ -212,14 +214,17 @@
         }
         .checkout-basket .checkout-close {
           display: inline-block;
-          line-height: 22px;
-          font-size: 18px;
           font-family: @proxima-bold;
+          font-size:18px;
+          line-height: 22px;
         }
-
+        .checkout-basket {
+          font-size:18px!important;
+        }
         .block-minicart {
           padding: 0px;
           width: 375px;
+
         }
         .action.close {
           width:100px;
@@ -228,6 +233,7 @@
           .action-text {
             position: relative;
             top:6px;
+            font-size:16px;
           }
         }
       }
@@ -246,12 +252,18 @@
       padding: 0;
       width: 375px;
       position: absolute;
-      top: 0px;
+      top: -25px;
+      right:-15px;
+    }
+    &:before {
+      content :'';
     }
   }
 }
 
-
+//
+//  Tablet (styles-m.css)
+//  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
   .minicart-wrapper {
@@ -260,7 +272,11 @@
       padding: 0;
       width: 375px;
       position: absolute;
-      top: 0px;
+      top: -15px;
+      right:-15px;
+    }
+    &:before {
+      content :'';
     }
   }
 }
@@ -279,6 +295,10 @@
       width: 375px;
       position: absolute;
       top: -56px;
+
+      &:before {
+        content :'';
+      }
     }
   }
 }
