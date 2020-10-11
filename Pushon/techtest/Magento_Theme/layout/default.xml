@@ -1,6 +1,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="top.links" remove="true" />
+        <referenceContainer name="footer">
+            <container name="overlay" htmlTag="div" after="bugs">
+                <block class="Magento\Framework\View\Element\Template" name="cart.overlay" template="Magento_Theme::overlay.phtml" after="-"/>
+            </container>
+        </referenceContainer>
         <referenceContainer name="page.top" htmlTag="header" htmlClass="page-header-full-width" />
         <referenceContainer name="header.container" htmlTag="div" htmlClass="page-header-full-width" />
         <referenceContainer name="main.content" htmlTag="main" htmlClass="main-content-full-width" />
@@ -15,3 +20,4 @@
         </referenceBlock>
     </body>
 </page>
+
